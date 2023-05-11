@@ -8,7 +8,7 @@ Based on the `say` command by Shauninman - https://github.com/shauninman/MiniUI
 - Flickers due to MainUI redraw
 
 # Example
-`./texpop 10 "WPS Starting" white 20 250 440 > /dev/null 2>&1 &`
+`./texpop 10 "Hello, World!" white 40 190 425 > /dev/null 2>&1 &`
 
 `Syntax: ./texpop duration "text" color font_size x y`
 
