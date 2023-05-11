@@ -1,7 +1,7 @@
 # texpop-miyoo
 A tool for popping up text on the screen at any given location, size and colour
 
-Based on the `say` command by Shauninman - https://github.com/shauninman/MiniUI
+Based on the say package by Shauninman - https://github.com/shauninman/MiniUI
 
 # Issues
 - ~Aliasing around edges~
