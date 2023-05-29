@@ -25,6 +25,8 @@ int main(int argc, char *argv[]) {
     char* text_str = argv[2];
     char* color_str = argv[3];
     int font_size = atoi(argv[4]);
+    int x = atoi(argv[5]);
+    int y = atoi(argv[6]);
 
 	SDL_Color color;
 	if (strcmp(color_str, "white") == 0) {
@@ -113,8 +115,13 @@ int main(int argc, char *argv[]) {
     void* fb0_map = mmap(NULL, map_size, PROT_READ | PROT_WRITE, MAP_SHARED, fb_fd, 0);
     SDL_Surface* screen = SDL_CreateRGBSurfaceFrom(fb0_map, width, height, bpp, pitch, 0, 0, 0, 0);
 
-	int x = atoi(argv[5]);
-    int y = atoi(argv[6]);
+    if (x == -1) {
+        x = (width - text->w) / 2;
+    }
+    if (y == -1) {
+        y = (height - text->h) / 2;
+    }
+
     SDL_Rect dst_rect = {x, y, text->w, text->h};
 
 	SDL_Surface* rotated_text = rotozoomSurface(text, 180, 1, 1);

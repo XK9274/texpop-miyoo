@@ -3,6 +3,9 @@ A tool for popping up text on the screen at any given location, size and colour
 
 Based on the say package by Shauninman - https://github.com/shauninman/MiniUI
 
+# Changelog
+- Added centering (use -1 for x or y to center text)
+
 # Issues
 - ~Aliasing around edges~
 - Flickers due to MainUI redraw
